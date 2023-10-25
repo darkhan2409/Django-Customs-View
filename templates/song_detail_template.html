@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Подробнее</title>
+</head>
+<body bgcolor="DarkGray">
+    <a href="{% url 'song_list_url' %}">К списку</a>
+    <h2>О песне</h2>
+    <h4>Название: {{ song.title }}</h4>
+    <p>Исполнитель: {{ song.artist }}</p>
+    <p>Жанр: {{ song.genre }}</p>
+    <br>
+    <i>Отрывок песни: {{ song.part_text }}</i>
+</body>
+</html>

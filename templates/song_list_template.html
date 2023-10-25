@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список песен</title>
+</head>
+<body bgcolor="DarkGray">
+    <h1>Моя музыка</h1>
+    <p>
+    {% for song in songs %}
+        {{ song.id }}. {{ song.artist }} - {{ song.title }}
+        <a href="{% url 'song_detail_url' song.id %}">Подробнее</a>
+        <br>
+    {% endfor %}
+    </p>
+</body>
+</html>
