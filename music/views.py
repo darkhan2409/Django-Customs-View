@@ -19,7 +19,7 @@ def SongDetailView(request, song_id):
 
 
 def SongFilterView(request, genre):
-    songs = Song.objects.filter(genre=genre)
+    songs = Song.objects.filter(genre=genre.capitalize())
     context = {
         'songs': songs
     }
